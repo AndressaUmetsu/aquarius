@@ -17,8 +17,7 @@ def bissecao (px, pf, x0, x1, it):
         
         print ("x0   =", x0, "\t f(x0) =", fx0) 
         print ("x1   =", x1, "\t f(x1) =", fx1)
-        print ("meio =", meio, "\t f(meio) =", fmeio)
-        print
+        print ("meio =", meio, "\t f(meio) =", fmeio, '\n')
         
         if fmeio * fx0 > 0:
             x0 = meio
