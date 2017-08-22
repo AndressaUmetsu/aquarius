@@ -10,10 +10,10 @@ def bissecao (px, pf, x0, x1, it):
 
     for i in range(0, it):
         print ("Iteração", i+1)
-        fx0   = f.subs(x, x0)
-        fx1   = f.subs(x, x1)
+        fx0   = f.subs(x, x0).evalf()
+        fx1   = f.subs(x, x1).evalf()
         meio  = x0 + (x1-x0)/2
-        fmeio = f.subs(x, meio)
+        fmeio = f.subs(x, meio).evalf()
         
         print ("x0   =", x0, "\t f(x0) =", fx0) 
         print ("x1   =", x1, "\t f(x1) =", fx1)
