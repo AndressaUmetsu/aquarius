@@ -7,6 +7,7 @@ from sympy import *
 def bissecao (px, pf, x0, x1, it):
     x = Symbol(px)
     f = sympify(pf)
+    print ("f(x) =", pf, "\n")
 
     for i in range(0, it):
         print ("Iteração", i+1)
@@ -14,11 +15,11 @@ def bissecao (px, pf, x0, x1, it):
         fx1   = f.subs(x, x1).evalf()
         meio  = x0 + (x1-x0)/2
         fmeio = f.subs(x, meio).evalf()
-        
-        print ("x0   =", x0, "\t f(x0) =", fx0) 
+
+        print ("x0   =", x0, "\t f(x0) =", fx0)
         print ("x1   =", x1, "\t f(x1) =", fx1)
         print ("meio =", meio, "\t f(meio) =", fmeio, '\n')
-        
+
         if fmeio * fx0 > 0:
             x0 = meio
         elif fmeio * fx1 > 0:
