@@ -13,8 +13,7 @@ def bissecao (px, pf, x0, x1):
     
     erroP = abs(x0 - x1)/abs(x1)
     while erroP > 0.00001:
-        i=i+1
-        
+        i+=1
         print ("\nIteração ", i)
 
         fx0   = f.subs(x, x0).evalf()
