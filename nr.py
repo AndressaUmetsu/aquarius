@@ -11,14 +11,20 @@ def nr (px, pf, x0):
     df = diff(pf)
     print ("f(x) =", pf, "\n")
     i = 0
-    fx0 = 1
-
-    while abs(fx0) > 0.00001:
-        print ("Iteração", i+1)
+    fx0  =  f.subs(x, x0).evalf()
+    dfx0 = df.subs(x, x0).evalf()
+    x1 = x0
+    x0   = x0 - fx0/dfx0
+    i+=1
+    print ("Iteração", i)
+    print ("x =", x0, "\t f(x0) =", fx0, '\n')
+    while  (100 * (abs(x1-x0) / abs(x0))) > 0.00001:
         fx0  =  f.subs(x, x0).evalf()
         dfx0 = df.subs(x, x0).evalf()
+        x1 = x0
         x0   = x0 - fx0/dfx0
         i+=1
+        print ("Iteração", i)
         print ("x =", x0, "\t f(x0) =", fx0, '\n')
 
 nr ('x', '1 + x * sin(x)', 5/2)
