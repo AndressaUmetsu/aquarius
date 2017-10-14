@@ -4,7 +4,7 @@
 from sympy import *
 x = Symbol('x')
 
-#símbolo, função, valor inicial, número de iterações
+#lista de pontos
 def newton (lista):
     n = len(lista)
     matriz = zeros(n,n+1)
