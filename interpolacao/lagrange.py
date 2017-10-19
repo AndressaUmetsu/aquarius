@@ -18,7 +18,7 @@ def lagrange (lista):
         poli += L
 
     poli = simplify(poli)
-    print(poli)
+    pprint(poli)
     return poli
 
 lista = [(2,3), (3,6), (4,10)]

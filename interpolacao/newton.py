@@ -16,7 +16,7 @@ def newton (lista):
     for j in range(2, n+1):
         for i in range(0, n-j+1):
             matriz[i,j] = (matriz[i+1,j-1] - matriz[i,j-1]) / (matriz[i+j-1, 0] - matriz[i, 0])
-    
+
     print(matriz)
 
     poli = 0
@@ -26,7 +26,7 @@ def newton (lista):
             aux *= (x - matriz[j-2, 0])
         poli += matriz[0,j]*aux
     poli = simplify(poli)
-    print (poli)
+    pprint (poli)
     return poli
 
 # lista = [(2,3), (3,6), (4,10)]
