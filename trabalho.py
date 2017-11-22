@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from sympy import *
+from math import sin, cos, abs
 
 #símbolos, lista de funções, valores iniciais, erro relativo
 def pfixo (px, pf, x0, per):
@@ -29,4 +30,5 @@ def pfixo (px, pf, x0, per):
         x0 = xnovo
         it+=1
 
-tabela = pfixo('x1 x2', ['(sin(x1+x2) - x2)/8', '(-cos(x1*x2) + x1)/8'], [0.1,0], 10**-5)
+tabela = pfixo('x1 x2', ['(sin(x1-x2) - x2)/8', '(-cos(x1*x2) + x1)/8'], [0.1,0], 10**-5)
+print(latex(tabela))
